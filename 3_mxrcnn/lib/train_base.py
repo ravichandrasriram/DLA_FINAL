@@ -188,7 +188,7 @@ def set_hyper_params(gpus=[0], lr=0.001, lr_decay_epoch="7", epochs=10, batch_si
     system_dict["rcnn_batch_size"] = batch_size;
 
 
-def set_output_params(log_interval=100, save_prefix="model_vgg16"):
+def set_output_params(log_interval=100, out_path="trained_model", save_prefix="model_vgg16"):
     '''
     User function: Set output parameters
 
@@ -200,9 +200,9 @@ def set_output_params(log_interval=100, save_prefix="model_vgg16"):
         None
     '''
     system_dict["log_interval"] = log_interval;
-    if(not os.path.isdir("trained_model")):
-        os.mkdir("trained_model");
-    system_dict["save_prefix"] = "trained_model/" + save_prefix;
+    if(not os.path.isdir(out_path)):
+        os.mkdir(out_path);
+    system_dict["save_prefix"] = out_path+ "/" + save_prefix;
 #######################################################################################################################################
 
 
