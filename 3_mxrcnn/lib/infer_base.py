@@ -378,7 +378,7 @@ def Infer(img_name, mod,out_path="output.png"):
     if system_dict["vis"]:
         vis_detection(im_orig, det, system_dict["classes"], thresh=system_dict["vis_thresh"])
     
-    save_detection(im_orig, det, system_dict["classes"], thresh=system_dict["vis_thresh"],out_path)
+    save_detection(im_orig, det, out_path, system_dict["classes"], thresh=system_dict["vis_thresh"])
 
     return output;
 
