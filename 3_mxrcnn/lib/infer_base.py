@@ -321,7 +321,7 @@ def load_model(sym):
 
 
 #######################################################################################################################################
-def Infer(img_name, mod,out_path="output.png"):
+def Infer(img_name, mod,out_path):
     '''
     User function: Run inference on image and visualize it
 
@@ -378,7 +378,7 @@ def Infer(img_name, mod,out_path="output.png"):
     if system_dict["vis"]:
         vis_detection(im_orig, det, system_dict["classes"], thresh=system_dict["vis_thresh"])
     
-    save_detection(im_orig, det, out_path, system_dict["classes"], thresh=system_dict["vis_thresh"])
+    save_detection(im_orig, det,  system_dict["classes"], out_path, thresh=system_dict["vis_thresh"])
 
     return output;
 
