@@ -15,7 +15,7 @@ def vis_detection(im_orig, detections, class_names, thresh=0.7):
     plt.show()
 
     
-def save_detection(im_orig, detections, class_names, thresh=0.7):
+def save_detection(im_orig, detections, class_names, thresh=0.7, out_path="output.png"):
     """visualize [cls, conf, x1, y1, x2, y2]"""
     import matplotlib.pyplot as plt
     import random
@@ -29,5 +29,5 @@ def save_detection(im_orig, detections, class_names, thresh=0.7):
             plt.gca().add_patch(rect)
             plt.gca().text(x1, y1 - 2, '{:s} {:.3f}'.format(class_names[cls], conf),
                            bbox=dict(facecolor=colors[cls], alpha=0.5), fontsize=12, color='white')
-    plt.savefig("output.png")
+    plt.savefig(out_path)
 
