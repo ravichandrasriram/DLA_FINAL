@@ -15,7 +15,7 @@ def vis_detection(im_orig, detections, class_names, thresh=0.7):
     plt.show()
 
     
-def save_detection(im_orig, detections, class_names, thresh=0.7, out_path="output.png"):
+def save_detection(im_orig, detections, out_path="output.png", class_names, thresh=0.7):
     """visualize [cls, conf, x1, y1, x2, y2]"""
     import matplotlib.pyplot as plt
     import random
