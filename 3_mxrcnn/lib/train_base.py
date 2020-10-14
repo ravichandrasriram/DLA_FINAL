@@ -125,7 +125,7 @@ def set_model_params(model_name="vgg16", resume=False, start_epoch=0):
         system_dict["rcnn_pooled_size"] = '(7, 7)';
     
     elif(model_name == "resnet50"):
-        system_dict["pretrained"] = "pretrained/model_resnet50-0002.params";
+        system_dict["pretrained"] = "pretrained/model_resnet50-0001.params";
         if(not os.path.isdir("pretrained")):
             os.mkdir("pretrained");
         system_dict["resume"] = resume;
